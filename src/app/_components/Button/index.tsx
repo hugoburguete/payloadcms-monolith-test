@@ -1,6 +1,7 @@
 'use client'
 
 import React, { ElementType } from 'react'
+import cx from 'classnames'
 import Link from 'next/link'
 
 import classes from './index.module.scss'
@@ -44,8 +45,8 @@ export const Button: React.FC<Props> = ({
     .join(' ')
 
   const content = (
-    <div className={classes.content}>
-      <span className={classes.label}>{label}</span>
+    <div className={`flex items-center content-around`}>
+      <span className={`mb-0 text-center flex items-center`}>{label}</span>
     </div>
   )
 
@@ -53,7 +54,18 @@ export const Button: React.FC<Props> = ({
 
   if (el === 'link') {
     return (
-      <Link href={href || ''} className={className} {...newTabProps} onClick={onClick}>
+      <Link
+        href={href || ''}
+        className={cx(
+          classNameFromProps,
+          'border-none cursor-pointer inline-flex content-center bg-transparent py-3 px-6 no-underline',
+          {
+            ['asd']: appearance === 'primary',
+          },
+        )}
+        {...newTabProps}
+        onClick={onClick}
+      >
         {content}
       </Link>
     )

@@ -19,9 +19,7 @@ export const Posts: CollectionConfig = {
     useAsTitle: 'title',
     defaultColumns: ['title', 'slug', 'updatedAt'],
     livePreview: {
-      url: ({data}) => {
-        return `${process.env.PAYLOAD_PUBLIC_SERVER_URL}/posts/${data.slug}`
-      }
+      url: ({ data }) => `${process.env.PAYLOAD_PUBLIC_SERVER_URL}/posts/${data.slug}`,
     },
     preview: doc => {
       return `${process.env.PAYLOAD_PUBLIC_SERVER_URL}/next/preview?url=${encodeURIComponent(
