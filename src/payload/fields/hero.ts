@@ -41,6 +41,11 @@ export const hero: Field = {
         leaves: [],
       },
     }),
+    {
+      type: 'text',
+      name: 'subtitle',
+      required: false
+    },
     linkGroup({
       overrides: {
         maxRows: 2,
