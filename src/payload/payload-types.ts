@@ -34,6 +34,7 @@ export interface Page {
     richText: {
       [k: string]: unknown
     }[]
+    subtitle: string 
     links?:
       | {
           link: {
@@ -210,6 +211,7 @@ export interface Post {
     richText: {
       [k: string]: unknown
     }[]
+    subtitle: string
     links?:
       | {
           link: {
@@ -465,6 +467,7 @@ export interface Project {
     richText: {
       [k: string]: unknown
     }[]
+    subtitle: string
     links?:
       | {
           link: {
