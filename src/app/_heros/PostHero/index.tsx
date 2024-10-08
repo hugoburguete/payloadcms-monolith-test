@@ -1,6 +1,7 @@
 'use client'
 
 import React, { Fragment } from 'react'
+import { useLivePreview } from '@payloadcms/live-preview-react'
 import Link from 'next/link'
 
 import { Post } from '../../../payload/payload-types'
@@ -10,7 +11,6 @@ import RichText from '../../_components/RichText'
 import { formatDateTime } from '../../_utilities/formatDateTime'
 
 import classes from './index.module.scss'
-import { useLivePreview } from '@payloadcms/live-preview-react'
 
 export const PostHero: React.FC<{
   post: Post
@@ -18,8 +18,8 @@ export const PostHero: React.FC<{
   const { data: post } = useLivePreview<Post>({
     serverURL: 'http://localhost:3000',
     initialData,
-    depth: 2
-  });
+    depth: 2,
+  })
 
   const {
     id,

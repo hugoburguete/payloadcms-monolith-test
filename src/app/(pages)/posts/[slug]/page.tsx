@@ -1,4 +1,5 @@
 import React from 'react'
+import { useLivePreview } from '@payloadcms/live-preview-react'
 import { Metadata } from 'next'
 import { draftMode } from 'next/headers'
 import { notFound } from 'next/navigation'
@@ -11,7 +12,6 @@ import { Blocks } from '../../../_components/Blocks'
 import { PremiumContent } from '../../../_components/PremiumContent'
 import { PostHero } from '../../../_heros/PostHero'
 import { generateMeta } from '../../../_utilities/generateMeta'
-import { useLivePreview } from '@payloadcms/live-preview-react'
 
 // Force this page to be dynamic so that Next.js does not cache it
 // See the note in '../../../[slug]/page.tsx' about this
